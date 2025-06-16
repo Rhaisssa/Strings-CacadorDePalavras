@@ -1,5 +1,16 @@
-One More Light
-Linkin Park
+## 📄 Sobre o projeto
+
+Este projeto é um **extrator de palavras-chave** desenvolvido com **HTML**, **CSS** e **JavaScript**.  
+A ferramenta permite que o usuário cole ou digite um texto e, ao clicar no botão **"Extrair"**, o sistema identifica as palavras mais frequentes, **ignorando termos comuns**, e as exibe em destaque na tela.
+
+Para demonstração e testes, será utilizada a letra da música **"One More Light"** da banda **Linkin Park** como exemplo de conteúdo textual.
+
+> ⚠️ **Atenção:** a letra da música é utilizada **apenas para fins educacionais e sem fins lucrativos**.
+
+---
+
+### 🎵 One More Light  
+**Linkin Park**
 
 Should've stayed, were there signs I ignored?
 Can I help you not to hurt anymore?
