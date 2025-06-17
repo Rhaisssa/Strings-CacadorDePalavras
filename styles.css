@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-    --cor-destaque: #eae5e6;
-    --cor-gradiente-preto: linear-gradient(113deg, #9e1856 0%, #e711ef 44.96%, #e1a7cd 100%);
+    --cor-destaque: #d9b3ff; /* Lilás claro */
+    --cor-gradiente-roxo: linear-gradient(113deg, #5e17eb 0%, #9d3cff 50%, #e5b3ff 100%);
+    --cor-fundo-container: rgba(255, 255, 255, 0.06);
+    --cor-texto: #f5f5f5;
     --fonte-principal: "Lato", sans-serif;
+    --sombra-suave: 0 0 15px rgba(0, 0, 0, 0.2);
+    --cor-botao-hover: #ffffff;
 }
 
 * {
@@ -11,14 +15,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--fonte-principal);
-    font-style: italic;
 }
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--cor-gradiente-preto);
+    background: var(--cor-gradiente-roxo);
     min-height: 100vh;
     padding: 2rem;
     flex-direction: column;
@@ -29,12 +32,12 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--cor-fundo-container);
     border-radius: 1rem;
     padding: 2rem;
     width: 100%;
     max-width: 800px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--sombra-suave);
 }
 
 h1 {
@@ -42,6 +45,7 @@ h1 {
     text-align: center;
     font-size: 2.2rem;
     text-transform: uppercase;
+    font-style: italic;
 }
 
 #entrada-de-texto {
@@ -53,10 +57,16 @@ h1 {
     font-size: 1.2rem;
     background: #fff;
     resize: vertical;
+    transition: box-shadow 0.3s ease;
 }
 
 #entrada-de-texto::placeholder {
     color: #828282;
+}
+
+#entrada-de-texto:focus {
+    outline: none;
+    box-shadow: 0 0 5px #b76eff;
 }
 
 #botao-palavrachave {
@@ -64,19 +74,20 @@ h1 {
     border: none;
     border-radius: 0.5rem;
     background: var(--cor-destaque);
-    color: #000;
+    color: #3c0064;
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 #botao-palavrachave:hover {
-    background: #fff;
+    background: var(--cor-botao-hover);
+    transform: scale(1.03);
 }
 
 #resultado-palavrachave {
-    color: var(--cor-destaque);
+    color: var(--cor-texto);
     font-size: 1.5rem;
     text-align: center;
     word-wrap: break-word;
